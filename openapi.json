@@ -712,11 +712,25 @@
                         "enum": [
                             "subTopic"
                         ]
+                    },
+                    "senderId": {
+                        "type": "string"
+                    },
+                    "content": {
+                        "type": "string"
+                    },
+                    "tags": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Tag"
+                        }
                     }
                 },
                 "required": [
                     "id",
-                    "type"
+                    "type",
+                    "senderId",
+                    "content"
                 ]
             },
             "CreateChatConversationDto": {

@@ -45,7 +45,15 @@ export class ChatConversationModel {
   pinnedMessages?: ObjectID[];
 
   @Prop({
-    type: [{ id: { type: String }, type: { type: String } }],
+    // adding sender ID and content
+    type: [
+      {
+        id: { type: String },
+        type: { type: String },
+        senderId: { type: String },
+        content: { type: String },
+      },
+    ],
     required: false,
     default: [],
   })
