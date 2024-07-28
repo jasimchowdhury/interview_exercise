@@ -1,11 +1,11 @@
 import { ApiProperty } from '@nestjs/swagger';
 import { Permission } from './Permission.dto';
 import { Product, Context } from './ContextSchema.dto';
-
+//Enum for tag types
 export enum TagType {
   subTopic = 'subTopic',
 }
-
+//DTO for a tag
 export class Tag {
   @ApiProperty({ type: String })
   id: string;
@@ -14,6 +14,7 @@ export class Tag {
   type: TagType;
 }
 
+//DTO for creating a chat conversation
 export class CreateChatConversationDto {
   @ApiProperty()
   product: Product;
